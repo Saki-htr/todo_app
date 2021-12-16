@@ -8,7 +8,7 @@ to do の作成・編集・削除ができるシンプルなWebアプリケー�
 
 ## 使い方
 ### 作成
-todoを入力後、ENTERキーをクリックして登録する。
+todoを入力後、ENTERキーを押下して登録する。
 
 [![Image from Gyazo](https://i.gyazo.com/aeba2fc939ce06f210ea5bfcbe93bd79.gif)](https://gyazo.com/aeba2fc939ce06f210ea5bfcbe93bd79)
 
