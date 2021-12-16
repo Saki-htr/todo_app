@@ -14,7 +14,7 @@
     <h1>TodoList</h1>
     <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" v-model="newTodo" @keyup.enter="addTodo">
     <ul class="todo-list">
-      <li class="todo" v-for="todo in todos" :class="{editing: todo == editedTodo}">
+      <li class="todo" v-for="todo in todos" :key="todo.id" :class="{editing: todo == editedTodo}">
         <div class="view">
           <label @dblclick="editTodo(todo)">{{todo.content}}</label>
           <button type="button" class="destroy" @click="removeTodo(todo)">✕</button>
