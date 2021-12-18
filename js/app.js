@@ -23,7 +23,7 @@ const app = new Vue({
       if (!value) {
         return
       }
-      this.todos.push({ id: this.todos.length + 1, content: value })
+      this.todos.push({ id: Math.random().toString(), content: value })
       this.newTodo = ''
     },
     removeTodo: function (todo) {
