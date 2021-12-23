@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TodoList</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style> [v-cloak] { display: none; } </style>
+</head>
+<body>
+  <div id="todoapp" class="container" v-cloak >
+    <h1>TodoList</h1>
+    <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" v-model="newTodo" @keyup.enter="addTodo">
+    <ul class="todo-list">
+      <li class="todo" v-for="todo in todos" :key="todo.id" :class="{editing: todo == editedTodo}">
+        <div class="view">
+          <label @dblclick="editTodo(todo)">{{todo.content}}</label>
+          <button type="button" class="destroy" @click="removeTodo(todo)">✕</button>
+        </div>
+        <input class="edit" type="text" v-model="todo.content"  @keyup.enter="doneEdit(todo)" @blur="doneEdit(todo)">
+      </li>
+    </ul>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
